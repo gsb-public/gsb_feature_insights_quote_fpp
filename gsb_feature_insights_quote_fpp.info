@@ -19,6 +19,7 @@ features[ctools][] = ds:ds:1
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
 features[ds_field_settings][] = fieldable_panels_pane|insights_quote|default
+features[ds_fields][] = insight_quote
 features[ds_layout_settings][] = fieldable_panels_pane|insights_quote|default
 features[features_api][] = api:2
 features[field_base][] = field_quote_author_name_title

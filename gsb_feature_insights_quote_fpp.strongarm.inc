@@ -34,6 +34,9 @@ function gsb_feature_insights_quote_fpp_strongarm() {
       'people_fpp' => array(
         'custom_settings' => FALSE,
       ),
+      'insight_topic_teaser' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -44,7 +47,7 @@ function gsb_feature_insights_quote_fpp_strongarm() {
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '6',
+            'weight' => '5',
             'visible' => FALSE,
           ),
         ),

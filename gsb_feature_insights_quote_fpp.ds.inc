@@ -17,36 +17,47 @@ function gsb_feature_insights_quote_fpp_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'insights_quote';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'field_body' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
-      ),
-    ),
-    'field_link_single' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
-      ),
-    ),
-    'field_quote_author_name_title' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
-      ),
-    ),
-    'field_quote_link_company' => array(
+    'insight_quote' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
         ),
+        'conditions' => array(),
       ),
     ),
   );
   $export['fieldable_panels_pane|insights_quote|default'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
+ * Implements hook_ds_custom_fields_info().
+ */
+function gsb_feature_insights_quote_fpp_ds_custom_fields_info() {
+  $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'insight_quote';
+  $ds_field->label = 'Insights Quote';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'fieldable_panels_pane' => 'fieldable_panels_pane',
+  );
+  $ds_field->ui_limit = 'insights_quote|*';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<a href="[fieldable_panels_pane:field-idea-story-ref:url]"><span class="first-double-apostrophe">&ldquo;</span><span class="quote">[fieldable_panels_pane:field-body]</span><span class="last-double-apostrophe">&rdquo;</span>
+<span class="dash">—</span><span class="attribution">[fieldable_panels_pane:field_attribution]</span></a>',
+      'format' => 'full_html',
+    ),
+    'use_token' => 1,
+  );
+  $export['insight_quote'] = $ds_field;
 
   return $export;
 }
@@ -67,19 +78,11 @@ function gsb_feature_insights_quote_fpp_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_body',
-        1 => 'field_link_single',
-        2 => 'group_wrapper_author',
-        3 => 'field_quote_author_name_title',
-        4 => 'field_quote_link_company',
+        0 => 'insight_quote',
       ),
     ),
     'fields' => array(
-      'field_body' => 'ds_content',
-      'field_link_single' => 'ds_content',
-      'group_wrapper_author' => 'ds_content',
-      'field_quote_author_name_title' => 'ds_content',
-      'field_quote_link_company' => 'ds_content',
+      'insight_quote' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
