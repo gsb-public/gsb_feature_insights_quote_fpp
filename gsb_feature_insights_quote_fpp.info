@@ -22,7 +22,6 @@ features[ds_field_settings][] = fieldable_panels_pane|insights_quote|default
 features[ds_fields][] = insight_quote
 features[ds_layout_settings][] = fieldable_panels_pane|insights_quote|default
 features[features_api][] = api:2
-features[field_base][] = field_quote_author_name_title
 features[field_group][] = group_wrapper_author|fieldable_panels_pane|insights_quote|default
 features[field_instance][] = fieldable_panels_pane-insights_quote-field_attribution
 features[field_instance][] = fieldable_panels_pane-insights_quote-field_body

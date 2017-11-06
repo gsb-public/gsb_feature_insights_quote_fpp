@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gsb_feature_insights_quote_fpp_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -40,7 +40,11 @@ function gsb_feature_insights_quote_fpp_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_author|fieldable_panels_pane|insights_quote|default'] = $field_group;
+  $field_groups['group_wrapper_author|fieldable_panels_pane|insights_quote|default'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Author wrapper');
+
+  return $field_groups;
 }

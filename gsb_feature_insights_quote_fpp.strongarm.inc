@@ -43,6 +43,9 @@ function gsb_feature_insights_quote_fpp_strongarm() {
         'title' => array(
           'weight' => '0',
         ),
+        'redirect' => array(
+          'weight' => '4',
+        ),
       ),
       'display' => array(
         'title' => array(

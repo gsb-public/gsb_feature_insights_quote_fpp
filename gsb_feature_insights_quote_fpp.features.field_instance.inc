@@ -10,7 +10,8 @@
 function gsb_feature_insights_quote_fpp_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fieldable_panels_pane-insights_quote-field_attribution'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-insights_quote-field_attribution'.
   $field_instances['fieldable_panels_pane-insights_quote-field_attribution'] = array(
     'bundle' => 'insights_quote',
     'custom_add_another' => '',
@@ -92,7 +93,7 @@ function gsb_feature_insights_quote_fpp_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-insights_quote-field_body'
+  // Exported field_instance: 'fieldable_panels_pane-insights_quote-field_body'.
   $field_instances['fieldable_panels_pane-insights_quote-field_body'] = array(
     'bundle' => 'insights_quote',
     'default_value' => NULL,
@@ -140,12 +141,13 @@ function gsb_feature_insights_quote_fpp_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-insights_quote-field_idea_story_ref'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-insights_quote-field_idea_story_ref'.
   $field_instances['fieldable_panels_pane-insights_quote-field_idea_story_ref'] = array(
     'bundle' => 'insights_quote',
     'custom_add_another' => '',
@@ -185,7 +187,7 @@ function gsb_feature_insights_quote_fpp_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 2,
+      'weight' => 1,
     ),
     'workbench_access_field' => 0,
   );
