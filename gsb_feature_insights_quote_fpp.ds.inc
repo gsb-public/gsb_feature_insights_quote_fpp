@@ -24,8 +24,29 @@ function gsb_feature_insights_quote_fpp_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
         ),
         'conditions' => array(),
+      ),
+    ),
+    'field_idea_story_ref' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lbw' => 1,
+          'lbw-el' => 'h2',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
       ),
     ),
   );
@@ -79,10 +100,12 @@ function gsb_feature_insights_quote_fpp_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'insight_quote',
+        1 => 'field_idea_story_ref',
       ),
     ),
     'fields' => array(
       'insight_quote' => 'ds_content',
+      'field_idea_story_ref' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -93,6 +116,7 @@ function gsb_feature_insights_quote_fpp_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['fieldable_panels_pane|insights_quote|default'] = $ds_layout;
 

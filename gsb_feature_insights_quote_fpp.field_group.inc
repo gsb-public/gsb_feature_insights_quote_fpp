@@ -21,11 +21,8 @@ function gsb_feature_insights_quote_fpp_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Author wrapper',
-    'weight' => '2',
-    'children' => array(
-      0 => 'field_quote_author_name_title',
-      1 => 'field_quote_link_company',
-    ),
+    'weight' => '5',
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'Author wrapper',

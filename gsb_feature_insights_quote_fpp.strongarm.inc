@@ -37,20 +37,29 @@ function gsb_feature_insights_quote_fpp_strongarm() {
       'insight_topic_teaser' => array(
         'custom_settings' => FALSE,
       ),
+      'preview' => array(
+        'custom_settings' => FALSE,
+      ),
+      'compact' => array(
+        'custom_settings' => FALSE,
+      ),
+      'expanded' => array(
+        'custom_settings' => FALSE,
+      ),
+      'alumni_featured_content' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
           'weight' => '0',
         ),
-        'redirect' => array(
-          'weight' => '4',
-        ),
       ),
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '5',
+            'weight' => '7',
             'visible' => FALSE,
           ),
         ),
